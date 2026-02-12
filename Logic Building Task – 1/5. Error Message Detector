@@ -1,1 +1,18 @@
+Problem Statement:
+Detect error messages from system logs.
 
+# Given Logs
+logs = ["INFO", "ERROR", "WARNING", "ERROR"]
+
+# Start counting from 0
+error_count = 0
+
+# Check each entry in the logs
+for entry in logs:
+    # If the entry matches exactly "ERROR"
+    if entry == "ERROR":
+        # Add 1 to our counter
+        error_count += 1
+
+# Print the total
+print(f"Total Errors Found: {error_count}")
