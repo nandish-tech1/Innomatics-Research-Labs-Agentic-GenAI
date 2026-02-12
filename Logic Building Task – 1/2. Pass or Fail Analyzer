@@ -1,1 +1,18 @@
+# 1. This is our list of student scores
+marks = [45, 78, 90, 33, 60]
 
+# 2. We start our count at zero
+pass_count = 0
+fail_count = 0
+
+# 3. Look at each score one by one(Where Logic Works)
+for m in marks:
+    # Check if the score is 50 or higher
+    if m >= 50:
+        pass_count += 1  # Add 1 to pass total
+    else:
+        fail_count += 1  # Add 1 to fail total
+
+# 4. Show the final totals on the screen
+print(f"Total Students Passed: {pass_count}")
+print(f"Total Students Failed: {fail_count}")
