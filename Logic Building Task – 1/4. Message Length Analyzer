@@ -1,1 +1,19 @@
+Problem Statement:
+Analyze message sizes.
 
+# Given Message
+messages = ["Hi", "Welcome to the platform", "OK"]
+
+# Process each message in the list
+for msg in messages:
+    # Get the number of characters
+    length = len(msg)
+    
+    # Check if the message is longer than 10
+    if length > 10:
+        status = "Flagged: Too Long"
+    else:
+        status = "Short Message"
+    
+    # Print the results clearly
+    print(f"Message: '{msg}' | Length: {length} | {status}")
