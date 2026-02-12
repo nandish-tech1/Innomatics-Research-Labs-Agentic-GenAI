@@ -1,1 +1,20 @@
+Problem Statement:
+Clean and standardize user names.
 
+# List of Dummy names
+names = [" nandish ", "ram", " dimpu "]
+
+# Create an empty list to store the clean names
+cleaned_names = []
+
+# Loop starts with each name in the list
+for n in names:
+    # .strip() removes spaces from ends
+    # .lower() makes all letters lowercase
+    clean_n = n.strip().lower()
+    
+    # Add the clean names to our new list
+    cleaned_names.append(clean_n)
+
+# Print the final result
+print("Cleaned List:", cleaned_names)   
