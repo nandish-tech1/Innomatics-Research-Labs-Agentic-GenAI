@@ -1,1 +1,35 @@
+Problem Statement
 
+Given a sentence, identify all unique words and display:
+The count of unique words
+The unique words themselves
+
+Hint
+Split the sentence into individual words.
+Convert the list of words into a set to remove duplicates.
+Print both the set and its length.
+
+Input
+Enter sentence: python is easy and python is powerful
+
+Expected Output
+Unique words count: 5  
+Unique words: {'python', 'is', 'easy', 'and', 'powerful'}
+
+The Code for this statement:
+
+# Given Sentence
+sentence = "python is easy and python is powerful"
+
+# Split the sentence into a list of words
+words = sentence.split()
+
+# Convert the list to a set to remove duplicates
+unique_words = set(words)
+
+# Count how many items are in the set
+count = len(unique_words)
+
+# Display the results
+print(f"Unique words count: {count}")
+print(f"Unique words: {unique_words}")
