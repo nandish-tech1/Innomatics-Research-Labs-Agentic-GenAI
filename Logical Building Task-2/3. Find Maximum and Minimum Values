@@ -1,1 +1,24 @@
+Problem Statement
+Find the maximum and minimum values from a list of numbers.
 
+# Given Numbers 
+numbers = [45, 22, 89, 10, 66]
+
+# Start by assuming the first number is both the max and min
+max_val = numbers[0]
+min_val = numbers[0]
+
+# Loop through the list to compare
+for n in numbers:
+    # Update max if we find a bigger number
+    if n > max_val:
+        max_val = n
+    
+    # Update min if we find a smaller number
+    if n < min_val:
+        min_val = n
+
+# Display results
+print(f"List: {numbers}")
+print(f"Max: {max_val}")
+print(f"Min: {min_val}")
