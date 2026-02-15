@@ -1,1 +1,11 @@
+Problem Statement
+Convert a list into a tuple and display it.
 
+# Start with a list (mutable - can be changed)
+my_list = [10, 20, 30]
+
+# Use the tuple() function to convert it
+my_tuple = tuple(my_list)
+
+# Display the result
+print(f"Tuple: {my_tuple}")
