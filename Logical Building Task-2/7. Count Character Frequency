@@ -1,1 +1,20 @@
+Problem Statement
+Count how many times each character appears in a given string.
 
+# Given Data
+word = "pythonp"
+
+# Create an empty dictionary to store counts
+frequency = {}
+
+# Loop through each character in the string
+for char in word:
+    if char in frequency:
+        # If the character is already in the dictionary, add 1
+        frequency[char] += 1
+    else:
+        # character is set it to 1
+        frequency[char] = 1
+
+# Display the result
+print(frequency)
