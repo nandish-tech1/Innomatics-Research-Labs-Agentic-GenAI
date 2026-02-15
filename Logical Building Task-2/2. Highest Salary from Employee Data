@@ -1,29 +1,6 @@
 Problem Statement
 Store employee names and their salaries, and determine which employee has the highest salary.
 
-Hint
-Use a dictionary where the key is the employee name and the value is the salary.
-Compare salary values to find the highest.
-
-Input Format
-A dictionary where:
-Keys represent employee names.
-Values represent employee salaries.
-
-Example Input
-employees = {
-    "Ravi": 75000,
-    "Anita": 68000,
-    "Kiran": 72000
-}
-
-Expected Output
-Highest Salary: Ravi - 75000
-
-Real-Time Applications
-HR management systems
-Payroll analysis
-
 # Given Data
 employees = {
     "Ravi": 75000,
