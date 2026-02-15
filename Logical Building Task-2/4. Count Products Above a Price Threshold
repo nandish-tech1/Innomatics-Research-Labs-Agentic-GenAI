@@ -1,1 +1,17 @@
+Problem Statement
+Count how many products have a price greater than 1000.
 
+# List of product prices
+prices = [450, 1200, 899, 1500, 300]
+
+# Start our counter at 0
+count = 0
+
+# Look at each price in the list
+for p in prices:
+    # Check if the price is above 1000
+    if p > 1000:
+        count += 1 # Add 1 to our counter if true
+
+# Show the final result
+print(f"Products above 1000: {count}")
