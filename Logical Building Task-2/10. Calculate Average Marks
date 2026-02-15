@@ -1,1 +1,17 @@
+Problem Statement
+Calculate the average marks of a student from a list of marks.
 
+# Given Data
+marks = [80, 65, 90, 55]
+
+# 1. Calculate the sum of all marks
+total_sum = sum(marks)
+
+# 2. Find out how many subjects there are
+total_subjects = len(marks)
+
+# 3. Divide sum by count to get the average
+average = total_sum / total_subjects
+
+# 4. Display the result
+print(f"Average Marks: {average}")
