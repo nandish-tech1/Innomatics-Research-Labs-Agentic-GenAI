@@ -1,1 +1,14 @@
+Problem Statement
+Check whether a specific key exists in a dictionary.
 
+# Our dictionary of employee data
+employees = {"ID101": "Ravi", "ID102": "Anita", "ID103": "Kiran"}
+
+The key we want to look for
+search_key = "ID102"
+
+# Use the 'in' keyword to check
+if search_key in employees:
+    print("Employee exists")
+else:
+    print("Employee not found")
