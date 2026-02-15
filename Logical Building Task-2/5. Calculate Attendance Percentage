@@ -1,1 +1,19 @@
+Problem Statement
+Calculate the attendance percentage from a list containing "P" (Present) and "A" (Absent).
 
+# Given Attendence
+
+attendance = ["P", "P", "A", "P", "P"]
+
+# Count the number of "P" (Present) entries
+present_count = attendance.count("P")
+
+# Get the total number of days in the list
+total_days = len(attendance)
+
+# Calculate the percentage
+# (Presents divided by Total) multiplied by 100
+percentage = (present_count / total_days) * 100
+
+# Show the final result
+print(f"Attendance Percentage: {percentage}")
