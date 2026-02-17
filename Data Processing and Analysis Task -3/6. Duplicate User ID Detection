@@ -1,0 +1,19 @@
+Problem Statement 6: Duplicate User ID Detection
+Description:
+A system stores user IDs during registration. Duplicate IDs can cause data integrity issues.
+
+# Given Userids
+user_ids = ["user1", "user2", "user1", "user3", "user1", "user3"]
+
+# Create a dictionary to store the frequency of each user ID
+id_counts = {}
+
+for uid in user_ids:
+    # Increment the count if the ID exists, otherwise start at 1
+    id_counts[uid] = id_counts.get(uid, 0) + 1
+
+# Identify and display only the duplicates (count > 1)
+print("Duplicate User ID Detection:")
+for uid, count in id_counts.items():
+    if count > 1:
+        print(f"{uid} → {count} times")
