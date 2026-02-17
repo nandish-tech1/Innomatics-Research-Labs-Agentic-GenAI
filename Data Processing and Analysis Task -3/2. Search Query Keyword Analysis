@@ -1,1 +1,25 @@
+Problem Statement 2: Search Query Keyword Analysis
+Description:
+An e-commerce website stores customer search queries. 
+You are given a search query sentence entered by a user.
 
+# The input string
+query = "Buy mobile phone buy phone online"
+
+# Preprocess: Make lowercase and split into words
+words = query.lower().split()
+
+# Create a dictionary to store counts
+counts = {}
+for w in words:
+    counts[w] = counts.get(w, 0) + 1
+
+# Filter for words that appear more than once
+# This creates the final dictionary using a simple loop
+result = {}
+for word, count in counts.items():
+    if count > 1:
+        result[word] = count
+
+# Output the result
+print(result)
