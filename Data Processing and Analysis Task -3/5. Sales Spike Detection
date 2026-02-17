@@ -1,0 +1,22 @@
+Problem Statement 5: Sales Spike Detection
+Description:
+A retail company tracks daily sales. Sudden spikes in sales may indicate promotions or unusual activity.
+
+# Given sales Data
+sales = [1200, 1500, 900, 2200, 1400, 3000]
+
+# Calculate the average daily sales
+average_sales = sum(sales) / len(sales)
+
+# Define the spike threshold (30% above average)
+threshold = average_sales * 1.30
+
+print(f"Average Sales: {average_sales:.2f}")
+print(f"Spike Threshold: {threshold:.2f}")
+print("-" * 25)
+
+# Detect and display spikes
+# We use i+1 because list indices start at 0, but days start at 1
+for i, value in enumerate(sales):
+    if value > threshold:
+        print(f"Day {i + 1}: {value}")
