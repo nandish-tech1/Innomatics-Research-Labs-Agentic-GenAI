@@ -1,0 +1,29 @@
+Problem Statement 4: Email Domain Usage Analysis
+Description:
+A company wants to analyze which email providers its users are using. You are given a list of employee email IDs.
+
+
+emails = [
+    "ravi@gmail.com",
+    "anita@yahoo.com",
+    "kiran@gmail.com",
+    "suresh@gmail.com",
+    "meena@yahoo.com"
+]
+
+domain_counts = {}
+total_emails = len(emails)
+
+# Process each email
+for email in emails:
+    # Split the email at '@' and take the second part
+    domain = email.split('@')[1]
+    
+    # Update the count in our dictionary
+    domain_counts[domain] = domain_counts.get(domain, 0) + 1
+
+# Calculate and display percentages
+print("Email Domain Usage Analysis:")
+for domain, count in domain_counts.items():
+    percentage = (count / total_emails) * 100
+    print(f"{domain}: {percentage:.0f}%")
