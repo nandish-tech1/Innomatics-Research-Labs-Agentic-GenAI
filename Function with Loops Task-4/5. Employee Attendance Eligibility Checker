@@ -1,1 +1,38 @@
+Problem Statement
+Create a function that:
+Accepts attendance list ("P", "A")
+Calculates attendance percentage
+Returns Eligible if ≥ 75% else Not Eligible
+
+# Function to check eligibility
+def check_eligibility(attendance_list):
+    present_days = 0
+    total_days = len(attendance_list)
+    
+    # Hint: Use loop to count present days
+    for status in attendance_list:
+        if status.upper() == "P":
+            present_days += 1
+            
+    # Calculate percentage
+    attendance_percent = (present_days / total_days) * 100
+    
+    # Logic for eligibility (Threshold 75%)
+    if attendance_percent >= 75:
+        result = "Eligible"
+    else:
+        result = "Not Eligible"
+        
+    # Hint: Use return statement
+    return result, attendance_percent
+
+# Input: Attendance list (P = Present, A = Absent)
+attendance = ["P", "P", "A", "P", "P", "A", "P", "P"]
+
+# Calling the function
+status, percentage = check_eligibility(attendance)
+
+# Output
+print(f"Attendance Percentage: {percentage}%")
+print(f"Status: {status}")
 
