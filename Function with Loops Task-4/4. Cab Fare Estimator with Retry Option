@@ -5,3 +5,31 @@ Base fare = ₹50
 Peak hour → 25% extra
 Allow retry using while loop
 
+# Function for fare calculation
+def calculate_fare(distance, is_peak):
+    base_fare = 50
+    rate_per_km = 12
+    
+    # Calculate initial fare
+    total_fare = base_fare + (distance * rate_per_km)
+    
+    # Apply 25% extra if it is a peak hour
+    if is_peak.lower() == 'yes':
+        total_fare = total_fare * 1.25
+        
+    return total_fare
+
+# While loop for retry
+while True:
+    print("\nCab Fare Estimator")
+    dist = float(input("Enter distance in km: "))
+    peak = input("Is it peak hour? (yes/no): ")
+    
+    fare = calculate_fare(dist, peak)
+    print(f"Estimated Total Fare: ₹{fare:.2f}")
+    
+    # Check if user wants to calculate another fare
+    retry = input("\nDo you want to calculate again? (yes/no): ")
+    if retry.lower() != 'yes':
+        print("Thank you for using the Cab Fare Estimator!")
+        break
