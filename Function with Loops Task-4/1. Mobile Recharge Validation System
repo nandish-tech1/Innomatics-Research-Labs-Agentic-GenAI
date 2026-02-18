@@ -1,1 +1,31 @@
-Function with Loops Task-4
+problem Statement
+Create a function to validate a mobile recharge request.
+Rules:
+Recharge amount must be ≥ ₹50
+Valid plans: 199, 299, 399, 599
+User should be allowed to retry if invalid
+
+
+# Function for validation
+def validate_recharge(amount):
+    valid_plans = [199, 299, 399, 599]
+    
+    if amount < 50:
+        return "Invalid: Amount must be at least ₹50."
+    elif amount not in valid_plans:
+        return f"Invalid: {amount} is not in the valid plans: {valid_plans}"
+    else:
+        return "Valid"
+
+# While loop for retry
+while True:
+    user_amount = int(input("Enter recharge amount: ₹"))
+    
+    result = validate_recharge(user_amount)
+    
+    if result == "Valid":
+        print(f"Success! Recharge of ₹{user_amount} completed.")
+        break  # Exit the loop on success
+    else:
+        print(result)
+        print("Please try again.\n")
