@@ -7,26 +7,40 @@ Prints Pass if average ≥ 50 else Fail
 # Function to process student results
 def process_result(marks_list):
     total = 0
-    
+
     # Hint: Use loop to calculate total
     for mark in marks_list:
         total = total + mark
-        
-    # Calculate average
+
     average = total / len(marks_list)
-    
+
     # Return result from function
     if average >= 50:
         return "Pass", average
     else:
         return "Fail", average
 
-# Input: List of student marks
-student_marks = [55, 45, 60, 40, 65]
+# Logic to take user input
+user_marks = []
+print("Enter marks one by one. Type 'done' when finished.")
 
-# Calling the function
-status, avg = process_result(student_marks)
+while True:
+    entry = input("Enter mark: ")
 
-# Output
-print(f"Average: {avg}")
-print(f"Result: {status}")
+    if entry.lower() == 'done':
+        break
+
+    # Convert input string to integer and add to list
+    try:
+        mark = int(entry)
+        user_marks.append(mark)
+    except ValueError:
+        print("Invalid input. Please enter a number or 'done'.")
+
+# Check if list is not empty before processing
+if len(user_marks) > 0:
+    status, avg = process_result(user_marks)
+    print(f"\nAverage: {avg}")
+    print(f"Result: {status}")
+else:
+    print("No marks were entered.")
