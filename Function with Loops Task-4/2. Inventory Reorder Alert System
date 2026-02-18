@@ -1,1 +1,27 @@
+Problem Statement
+Given a dictionary of products and stock quantities:
+
+Print Reorder Alert if stock < 15
+Print Stock OK otherwise
+
+# Given Inventory Data and maintain Stock Quantity
+inventory = {
+    "Laptops": 26,
+    "Mice": 11,
+    "Keyboards": 15,
+    "Monitors": 29,
+    "USB Cables": 7
+}
+
+# Function to check stock level
+def check_stock(product, quantity):
+    if quantity < 15:
+        print(f"REORDER ALERT: {product} is low (Stock: {quantity})")
+    else:
+        print(f"Stock OK: {product} (Stock: {quantity})")
+
+# Use for loop on dictionary
+print("Inventory Status Report:")
+for product, quantity in inventory.items():
+    check_stock(product, quantity)
 
