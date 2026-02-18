@@ -1,1 +1,7 @@
+Problem Statement
+Create a cab fare calculator:
+Base fare = ₹50
+₹12 per km
+Peak hour → 25% extra
+Allow retry using while loop
 
