@@ -1,1 +1,32 @@
+Problem Statement
+Create a function that:
+Accepts a list of student marks
+Calculates average marks
+Prints Pass if average ≥ 50 else Fail
 
+# Function to process student results
+def process_result(marks_list):
+    total = 0
+    
+    # Hint: Use loop to calculate total
+    for mark in marks_list:
+        total = total + mark
+        
+    # Calculate average
+    average = total / len(marks_list)
+    
+    # Return result from function
+    if average >= 50:
+        return "Pass", average
+    else:
+        return "Fail", average
+
+# Input: List of student marks
+student_marks = [55, 45, 60, 40, 65]
+
+# Calling the function
+status, avg = process_result(student_marks)
+
+# Output
+print(f"Average: {avg}")
+print(f"Result: {status}")
